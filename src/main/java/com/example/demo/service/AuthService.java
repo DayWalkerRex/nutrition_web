@@ -10,6 +10,9 @@ import com.example.demo.controller.dto.SignupRequestDto;
 import com.example.demo.entity.Users;
 import com.example.demo.repository.IUsersRepository;
 
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
 //import io.jsonwebtoken.Jwts;
 //import io.jsonwebtoken.SignatureAlgorithm;
 
@@ -50,7 +53,7 @@ public class AuthService {
 		return "User was succesfully added";
 	}
 	
-	/*public String generateJwtToken(Users user) {
+	public String generateJwtToken(Users user) {
 	    Date now = new Date();
 	    Date expiryDate = new Date(now.getTime() + jwtExpirationInMs);
 	    
@@ -67,5 +70,5 @@ public class AuthService {
 	    System.out.println(temp);
 	    
 	    return temp;
-	}*/
+	}
 }
